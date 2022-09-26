@@ -67,4 +67,22 @@ void main() {
       expect(b.compareTo(a) > 0, isTrue);
     });
   });
+
+  group('Semigroup', () {
+    test('associativity', () {
+      const a = false;
+      const b = false;
+      const c = true;
+
+      final lhs1 = a + b + c;
+      final rhs1 = a + (b + c);
+
+      expect(lhs1 == rhs1, isTrue);
+
+      final lhs2 = a.concat(b).concat(c);
+      final rhs2 = a.concat(b.concat(c));
+
+      expect(lhs2.equals(rhs2), isTrue);
+    });
+  });
 }

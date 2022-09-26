@@ -3,7 +3,7 @@ extension SetoidBool on bool {
 }
 
 extension OrdBool on bool {
-  bool operator <=(bool other) => !this || other;
+  bool operator <=(bool other) => !this | other;
 
   bool lte(bool other) => this <= other;
 
@@ -12,4 +12,10 @@ extension OrdBool on bool {
     if (lte(other)) return -1;
     return 1;
   }
+}
+
+extension SemigroupBool on bool {
+  bool operator +(bool other) => this | other;
+
+  bool concat(bool other) => this + other;
 }

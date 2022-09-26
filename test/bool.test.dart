@@ -57,5 +57,14 @@ void main() {
       expect((a <= b) && (b <= c), equals(a <= c));
       expect(a.lte(b) && b.lte(c), equals(a.lte(c)));
     });
+
+    test('.compareTo()', () {
+      const a = false;
+      const b = true;
+
+      expect(a.compareTo(a) == 0, isTrue);
+      expect(a.compareTo(b) < 0, isTrue);
+      expect(b.compareTo(a) > 0, isTrue);
+    });
   });
 }

@@ -27,8 +27,8 @@ void main() {
       const b = false;
       const c = false;
 
-      expect((a == b) && (b == c), equals(a == c));
-      expect(a.equals(b) && b.equals(c), equals(a.equals(c)));
+      expect((a == b) & (b == c), equals(a == c));
+      expect(a.equals(b) & b.equals(c), equals(a.equals(c)));
     });
   });
 
@@ -37,16 +37,16 @@ void main() {
       const a = false;
       const b = true;
 
-      expect((a <= b) || (b <= a), isTrue);
-      expect(a.lte(b) || b.lte(a), isTrue);
+      expect((a <= b) | (b <= a), isTrue);
+      expect(a.lte(b) | b.lte(a), isTrue);
     });
 
     test('antisymmetry', () {
       const a = false;
       const b = false;
 
-      expect((a <= b) && (b <= a), equals(a == b));
-      expect(a.lte(b) && b.lte(a), equals(a.equals(b)));
+      expect((a <= b) & (b <= a), equals(a == b));
+      expect(a.lte(b) & b.lte(a), equals(a.equals(b)));
     });
 
     test('transitivity', () {
@@ -54,8 +54,8 @@ void main() {
       const b = false;
       const c = true;
 
-      expect((a <= b) && (b <= c), equals(a <= c));
-      expect(a.lte(b) && b.lte(c), equals(a.lte(c)));
+      expect((a <= b) & (b <= c), equals(a <= c));
+      expect(a.lte(b) & b.lte(c), equals(a.lte(c)));
     });
 
     test('.compareTo()', () {

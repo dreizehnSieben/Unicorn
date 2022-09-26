@@ -1,4 +1,4 @@
-import 'package:unicorn/unicorn.dart';
+import 'package:unicorn/bool.dart';
 import 'package:test/test.dart';
 
 void main() {

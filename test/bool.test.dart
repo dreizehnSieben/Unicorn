@@ -85,4 +85,14 @@ void main() {
       expect(lhs2.equals(rhs2), isTrue);
     });
   });
+
+  group('Monoid', () {
+    test('right identity', () {
+      expect(true + Monoid.empty, isTrue);
+    });
+
+    test('left identity', () {
+      expect(Monoid.empty + true, isTrue);
+    });
+  });
 }

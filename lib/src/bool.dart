@@ -1,8 +1,8 @@
-extension SetoidBool on bool {
+extension Setoid on bool {
   bool equals(bool other) => this == other;
 }
 
-extension OrdBool on bool {
+extension Ord on bool {
   bool operator <=(bool other) => !this | other;
 
   bool lte(bool other) => this <= other;
@@ -14,8 +14,12 @@ extension OrdBool on bool {
   }
 }
 
-extension SemigroupBool on bool {
+extension Semigroup on bool {
   bool operator +(bool other) => this | other;
 
   bool concat(bool other) => this + other;
+}
+
+extension Monoid on bool {
+  static bool get empty => false;
 }

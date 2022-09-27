@@ -1,17 +1,17 @@
-extension Setoid on String {
+extension StringSetoid on String {
   bool equals(String other) => this == other;
 }
 
-extension Ord on String {
+extension StringOrd on String {
   bool operator <=(String other) => compareTo(other) <= 0;
 
   bool lte(String other) => this <= other;
 }
 
-extension Semigroup on String {
+extension StringSemigroup on String {
   String concat(String other) => this + other;
 }
 
-extension Monoid on String {
+extension StringMonoid on String {
   static String get empty => '';
 }

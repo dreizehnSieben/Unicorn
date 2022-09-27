@@ -84,11 +84,11 @@ void main() {
 
   group('Monoid', () {
     test('right identity', () {
-      expect('a'.concat(Monoid.empty), equals('a'));
+      expect('a'.concat(StringMonoid.empty), equals('a'));
     });
 
     test('left identity', () {
-      expect(Monoid.empty.concat('a'), equals('a'));
+      expect(StringMonoid.empty.concat('a'), equals('a'));
     });
   });
 }

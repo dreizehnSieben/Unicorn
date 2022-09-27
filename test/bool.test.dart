@@ -88,11 +88,11 @@ void main() {
 
   group('Monoid', () {
     test('right identity', () {
-      expect(true + Monoid.empty, isTrue);
+      expect(true + BoolMonoid.empty, isTrue);
     });
 
     test('left identity', () {
-      expect(Monoid.empty + true, isTrue);
+      expect(BoolMonoid.empty + true, isTrue);
     });
   });
 }

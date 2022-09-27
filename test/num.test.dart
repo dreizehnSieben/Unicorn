@@ -84,23 +84,23 @@ void main() {
 
   group('Monoid', () {
     test('right identity', () {
-      expect(7.concat(NumMonoid.empty), equals(7));
+      expect(7.concat(Monoid.empty), equals(7));
     });
 
     test('left identity', () {
-      expect(NumMonoid.empty.concat(7), equals(7));
+      expect(Monoid.empty.concat(7), equals(7));
     });
   });
 
   group('Group', () {
     test('right inverse', () {
       final n = 7;
-      expect(n.concat(n.invert()), equals(NumMonoid.empty));
+      expect(n.concat(n.invert()), equals(Monoid.empty));
     });
 
     test('left inverse', () {
       final n = 42.5;
-      expect(n.invert().concat(n), equals(NumMonoid.empty));
+      expect(n.invert().concat(n), equals(Monoid.empty));
     });
   });
 }
